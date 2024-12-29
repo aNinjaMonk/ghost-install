@@ -1,7 +1,7 @@
-USER=sansrati
-SITE_NAME=toothytales
-DB_USER=root
-DB_PASS=tales@123!
+USER=x
+SITE_NAME=x
+DB_USER=x
+DB_PASS=x
 
 
 # Create a new user and follow prompts
