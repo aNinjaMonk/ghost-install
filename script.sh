@@ -5,13 +5,13 @@ DB_PASS=x
 
 
 # Create a new user and follow prompts
-adduser $USER
+#adduser $USER
 
 # Add user to superuser group to unlock admin privileges
-usermod -aG sudo $USER
+#usermod -aG sudo $USER
 
 # Then log in as the new user
-su - $USER
+#su - $USER
 
 # Update package lists
 sudo apt-get update
@@ -28,12 +28,14 @@ sudo apt-get install mysql-server
 
 # Enter mysql
 sudo mysql
+
+## Manually update database with below commands
 # Update permissions
-ALTER USER $DB_USER@'localhost' IDENTIFIED WITH 'mysql_native_password' BY $DB_PASS;
+#ALTER USER $DB_USER@'localhost' IDENTIFIED WITH 'mysql_native_password' BY $DB_PASS;
 # Reread permissions
-FLUSH PRIVILEGES;
+#FLUSH PRIVILEGES;
 # exit mysql
-exit
+#exit
 
 # Download and import the Nodesource GPG key
 sudo apt-get update
