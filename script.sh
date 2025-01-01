@@ -1,8 +1,7 @@
-USER=x
-SITE_NAME=x
-DB_USER=x
-DB_PASS=x
+#!/usr/bin/env bash
 
+echo "** Enter SITE_NAME ** : "
+read SITE_NAME
 
 # Create a new user and follow prompts
 #adduser $USER
@@ -31,7 +30,7 @@ sudo mysql
 
 ## Manually update database with below commands
 # Update permissions
-#ALTER USER $DB_USER@'localhost' IDENTIFIED WITH 'mysql_native_password' BY $DB_PASS;
+#ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY $DB_PASS;
 # Reread permissions
 #FLUSH PRIVILEGES;
 # exit mysql
@@ -61,7 +60,7 @@ sudo npm install ghost-cli@latest -g
 sudo mkdir -p /var/www/$SITE_NAME
 
 # Set directory owner: Replace <user> with the name of your user
-sudo chown $USER:$USER /var/www/$SITE_NAME
+sudo chown blog:blog /var/www/$SITE_NAME
 
 # Set the correct permissions
 sudo chmod 775 /var/www/$SITE_NAME
