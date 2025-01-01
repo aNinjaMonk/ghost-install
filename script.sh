@@ -51,6 +51,9 @@ echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.co
 sudo apt-get update
 sudo apt-get install nodejs -y
 
+# install npm
+sudo apt install npm
+
 # Install Ghost CLI
 sudo npm install ghost-cli@latest -g
 
